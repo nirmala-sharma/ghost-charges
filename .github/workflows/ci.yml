@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ main ]
 
-  jobs:
-    backend:
+jobs:
+  backend:
       name: Backend (Python)
       runs-on: ubuntu-latest
       defaults:
@@ -31,7 +31,7 @@ on:
         - name: Accuracy evaluation
           run: python -m scripts.evaluate --statements 200
 
-    frontend:
+  frontend:
       name: Frontend (React + Typescript)
       runs-on: ubuntu-latest
       defaults:
